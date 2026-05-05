@@ -216,3 +216,12 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Skip the .env file
+.env
+.python-version
+complete.py
+setup_phase1.py
+
+
+
