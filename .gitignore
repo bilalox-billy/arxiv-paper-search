@@ -223,6 +223,15 @@ __marimo__/
 complete.py
 setup_phase1.py
 data/
+docs/*.md
+docs/*.txt
+docs/*.pdf
+docs/*.docx
+docs/*.doc
+docs/*.xls
+docs/*.xlsx
+docs/*.pptx
+docs/*.ppt
 
 
 
