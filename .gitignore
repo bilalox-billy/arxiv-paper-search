@@ -222,6 +222,7 @@ __marimo__/
 .python-version
 complete.py
 setup_phase1.py
+data/
 
 
 

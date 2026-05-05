@@ -82,7 +82,7 @@ def test_download_single_pdf():
             # Verify file structure
             expected_structure = f"2017/06/{arxiv_id.replace('/', '_')}.pdf"
             if expected_structure in str(pdf_path):
-                print(f"✓ File organized correctly: {expected_structure}")
+                print(f"File organized correctly: {expected_structure}")
             
             return True
         else:
@@ -125,10 +125,10 @@ def test_existing_file_skip():
         elapsed = time.time() - start_time
         
         if success and elapsed < 1.0:  # Should be instant
-            print(f"✓ Skipped existing file (took {elapsed:.2f}s)")
+            print(f"Skipped existing file (took {elapsed:.2f}s)")
             return True
         elif success and elapsed >= 1.0:
-            print(f"⚠ File downloaded again instead of skipping ({elapsed:.2f}s)")
+            print(f"File downloaded again instead of skipping ({elapsed:.2f}s)")
             return True  # Don't fail, but warn
         else:
             print(f"✗ Failed to handle existing file")
