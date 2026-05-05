@@ -6,7 +6,7 @@ This demonstrates how to use the search engine for various search tasks.
 
 from src.similarity_search import PaperSearchEngine, SearchMode
 from src.embedding import EmbeddingGenerator
-from config.settings import DB_CONFIG, EMBEDDING_MODEL_NAME
+from config.settings import DB_CONFIG, EMBEDDING_MODEL
 import logging
 
 # Configure logging
@@ -49,7 +49,7 @@ def example_vector_search():
     print("Using: Pure vector similarity (semantic search)")
     
     # Initialize
-    embedding_gen = EmbeddingGenerator(EMBEDDING_MODEL_NAME)
+    embedding_gen = EmbeddingGenerator(EMBEDDING_MODEL)
     search_engine = PaperSearchEngine(DB_CONFIG, embedding_gen)
     
     # Search
@@ -77,7 +77,7 @@ def example_keyword_search():
     print("Using: Full-text keyword search")
     
     # Initialize
-    embedding_gen = EmbeddingGenerator(EMBEDDING_MODEL_NAME)
+    embedding_gen = EmbeddingGenerator(EMBEDDING_MODEL)
     search_engine = PaperSearchEngine(DB_CONFIG, embedding_gen)
     
     # Search
@@ -105,7 +105,7 @@ def example_hybrid_search():
     print("Using: Hybrid search (70% vector + 30% keyword)")
     
     # Initialize
-    embedding_gen = EmbeddingGenerator(EMBEDDING_MODEL_NAME)
+    embedding_gen = EmbeddingGenerator(EMBEDDING_MODEL)
     search_engine = PaperSearchEngine(DB_CONFIG, embedding_gen)
     
     # Search
@@ -133,7 +133,7 @@ def example_filtered_search():
     print("Filters: Categories [cs.AI, cs.LG], Published after 2023-01-01")
     
     # Initialize
-    embedding_gen = EmbeddingGenerator(EMBEDDING_MODEL_NAME)
+    embedding_gen = EmbeddingGenerator(EMBEDDING_MODEL)
     search_engine = PaperSearchEngine(DB_CONFIG, embedding_gen)
     
     # Search with filters
@@ -162,7 +162,7 @@ def example_similar_papers():
     print_separator("Example 5: Find Similar Papers")
     
     # Initialize
-    embedding_gen = EmbeddingGenerator(EMBEDDING_MODEL_NAME)
+    embedding_gen = EmbeddingGenerator(EMBEDDING_MODEL)
     search_engine = PaperSearchEngine(DB_CONFIG, embedding_gen)
     
     # First, find a paper
@@ -208,7 +208,7 @@ def example_compare_modes():
     print("Comparing results from Vector, Keyword, and Hybrid modes...")
     
     # Initialize
-    embedding_gen = EmbeddingGenerator(EMBEDDING_MODEL_NAME)
+    embedding_gen = EmbeddingGenerator(EMBEDDING_MODEL)
     search_engine = PaperSearchEngine(DB_CONFIG, embedding_gen)
     
     # Search with each mode
@@ -240,7 +240,7 @@ def interactive_search():
     print_separator("Example 7: Interactive Search")
     
     # Initialize
-    embedding_gen = EmbeddingGenerator(EMBEDDING_MODEL_NAME)
+    embedding_gen = EmbeddingGenerator(EMBEDDING_MODEL)
     search_engine = PaperSearchEngine(DB_CONFIG, embedding_gen)
     
     print("\nInteractive Paper Search")
